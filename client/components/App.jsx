@@ -1,8 +1,21 @@
 import React from 'react'
+import Pixel from './Pixel'
 
 const App = () => {
+  var pixel = []
+  
+  for(let i=0; i < 500; i++){ 
+    pixel.push(<Pixel/>)
+    console.log(pixel)
+  }
+
   return (
-    <div>Yup.</div>
+    
+    <div>
+      
+      {pixel}
+     
+      </div>
   )
 }
 
