@@ -3,10 +3,12 @@ import Pixel from './Pixel'
 
 
 const App = () => {
+  const pixel = []
+  for (var i=0; i<880; i++) { pixel.push( <Pixel /> ) }
+
   return (
     <div>
-    <div>Yup.</div>
-    <Pixel />
+      {pixel}
     </div>
   )
 }

@@ -1,22 +1,30 @@
 import React from 'react'
 
-var bgColors = { "Default": "#81b71a",
-                    "Blue": "#00B1E1",
-                    "Cyan": "#37BC9B",
-                    "Green": "#8CC152",
-                    "Red": "#E9573F",
-                    "Yellow": "#F6BB42",
-};
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
-const Pixel = (props) => {
-  return (
-    <div id = "app" style = {{
-      height: 20,
-      width: 20,
-      backgroundColor: bgColors.Blue
-    }}>
+class Pixel extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      style: {
+        height: 40,
+        width: 40,
+        backgroundColor: randomHexColor()
+        }
+    }
+  }
 
-    </div>
-  )
+  render() {
+    let style = this.state.style
+    console.log(style)
+
+    return (
+      <div id = "app" style = {style}>
+
+      </div>
+    )
+  }
 }
+
 export default Pixel
