@@ -8,8 +8,8 @@ const makeStyle = () => ({
 })
 
 class Pixel extends React.Component {
-
   constructor(props) {
+
     super(props)
     this.state = {
       style: makeStyle()
@@ -21,9 +21,28 @@ class Pixel extends React.Component {
         style: makeStyle()
       })
     }
+    const mouseOver = evt => {
+      this.setState({
+        style: {
+          height: '50px',
+          width: '50px',
+          backgroundColor: 'white'
+        }
+      })
+    }
+    const doubleClick = evt => {
+      this.setState({
+        style: {
+          height: '50px',
+          width: '50px',
+          backgroundColor: 'black'
+        }
+      })
+    }
+
     return (
 
-      <div onClick={clickHandler} style={this.state.style}></div>
+      <div onClick={clickHandler} onMouseEnter={mouseOver} onDoubleClick={doubleClick} style={this.state.style}></div>
     )
   }
 }
