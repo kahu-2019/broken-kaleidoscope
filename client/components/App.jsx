@@ -3,7 +3,7 @@ import Pixel from './Pixel'
 
 const App = () => {
   var pixels = []
-  for (var i = 0; i < 5618; i++) {
+  for (var i = 0; i < 22472; i++) {
     pixels.push(<Pixel />)
   }
 

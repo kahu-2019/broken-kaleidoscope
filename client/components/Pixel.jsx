@@ -7,20 +7,23 @@ import React from 'react';
 // }
 
 
+
 class Pixel extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            height: '20px',
-            width: '20px',
+            height: '10px',
+            width: '10px',
             backgroundColor: 'aqua'
         }
     }
     render() {
+        const randomHexColor = () =>
+            `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
         const pixelStyle = {
             height: this.state.height,
             width: this.state.width,
-            backgroundColor: this.state.backgroundColor,
+            backgroundColor: randomHexColor(),
         }
         return (
             <div style={pixelStyle}></div>
