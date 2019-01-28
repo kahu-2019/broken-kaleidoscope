@@ -3,7 +3,12 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <Pixel />
+    <div>
+      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
+      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
+      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
+      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
+    </div>
   )
 }
 
