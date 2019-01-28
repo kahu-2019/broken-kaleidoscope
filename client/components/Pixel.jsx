@@ -4,7 +4,7 @@ const Pixel = () => {
   return (<div style={{
     fontFamily: 'Times New Roman',
     height: '50px',
-    width: '50%',
+    width: '5%',
     backgroundColor: 'blue'
   }}></div>)
 }

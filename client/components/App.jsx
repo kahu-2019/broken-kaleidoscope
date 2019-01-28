@@ -3,7 +3,30 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <Pixel />
+    <div style={{
+      width: "100%",
+    }}>
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+
+
+
+    </div >
   )
 }
 
