@@ -2,12 +2,13 @@ import React from 'react'
 import Pixel from './Pixel'
 
 const App = () => {
+  var pixel = []
+  for (let i = 0; i < 2500; i++) {
+    pixel.push(<Pixel key={i} />)
+  }
   return (
     <div>
-      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
-      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
-      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
-      <Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel /><Pixel />
+      {pixel}
     </div>
   )
 }
