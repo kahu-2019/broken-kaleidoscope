@@ -26,7 +26,7 @@ class Pixel extends React.Component {
             backgroundColor: randomHexColor(),
         }
         return (
-            <div style={pixelStyle}></div>
+            <div onMouseOver={() => this.setState({ backgroundColor: 'green' })} style={pixelStyle}></div>
         )
     }
 }
