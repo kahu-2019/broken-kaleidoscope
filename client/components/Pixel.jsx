@@ -3,24 +3,32 @@ import React from 'react'
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
+const newStyle = () => {
+  return {
+    height: 40,
+    width: 40,
+    backgroundColor: randomHexColor(),
+    }
+}
+
+
 class Pixel extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      style: {
-        height: 40,
-        width: 40,
-        backgroundColor: randomHexColor()
-        }
+      style: newStyle()
+      }
+    this.changeColor = () => this.setState({style: newStyle()})
     }
-  }
+  
 
   render() {
     let style = this.state.style
-    console.log(style)
+    
+    console.log(this.state)
 
     return (
-      <div id = "app" style = {style}>
+      <div id = "app" onMouseOver = {this.changeColor} style = {style}>
 
       </div>
     )
