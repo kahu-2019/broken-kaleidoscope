@@ -2,8 +2,8 @@ import React from 'react'
 
 const randomHexColor = () => `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 const makeStyle = () => ({
-  height: '50px',
-  width: '50px',
+  height: '10px',
+  width: '10px',
   backgroundColor: randomHexColor()
 })
 
@@ -24,8 +24,8 @@ class Pixel extends React.Component {
     const mouseOver = evt => {
       this.setState({
         style: {
-          height: '50px',
-          width: '50px',
+          height: '10px',
+          width: '10px',
           backgroundColor: 'white'
         }
       })
@@ -33,8 +33,8 @@ class Pixel extends React.Component {
     const doubleClick = evt => {
       this.setState({
         style: {
-          height: '50px',
-          width: '50px',
+          height: '10px',
+          width: '10px',
           backgroundColor: 'black'
         }
       })
