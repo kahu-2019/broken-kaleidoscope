@@ -1,23 +1,39 @@
 import React from 'react'
 import Pixel from './Pixel'
 
-const App = () => {
+const randomColor = () => `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
-  var pixels = []
-  for (var i = 0; i < 4067; i++) {
-    pixels.push(<Pixel />)
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pixels: this.createPixels()
+    }
+    setInterval(() => this.setState({ pixels: this.createPixels() }), 1000)
+  }
+  createPixels() {
+    var pixels = []
+    for (var i = 0; i < 10; i++) {
+      pixels.push(<Pixel key={i} color={randomColor()} />)
+    }
+    return pixels
   }
 
-  return (
-    <div style={{
-      width: "100%"
+  render() {
+    console.log(this.state)
 
-    }}>
+    return (
+      <div style={{
+        width: "100%"
 
-      {pixels}
+      }}>
 
-    </div >
-  )
+        {this.state.pixels}
+
+      </div >
+    )
+  }
+
 }
 
 export default App
