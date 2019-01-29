@@ -13,7 +13,8 @@ class Pixel extends React.Component {
         height: '20px',
         width: '20px',
         backgroundColor: this.randomHexColor()
-      }
+      },
+      update: setInterval(this.changeColour, 1000)
     }
   }
 
@@ -33,7 +34,9 @@ class Pixel extends React.Component {
 
   render() {
     return (
-      <div style={this.state.style} onMouseOver={this.clickHandler.bind(this)} />
+      <div style={this.state.style}
+        onMouseOver={this.clickHandler.bind(this)}
+        onMouseEnter={() => this.changeColour()} />
     )
   }
 }
