@@ -24,8 +24,9 @@ class Pixel extends React.Component {
     console.log(changeColor)
 
     const changeColorGreen = () => this.setState({ style: newStyle('green') })
+    const changeColorBlack = (evt) => this.setState({ style: newStyle('black') }, evt.preventDefault())
 
-    return <div style={this.state.style} onClick={changeColor} onMouseEnter={changeColorGreen}></div>
+    return <div style={this.state.style} onClick={changeColor} onMouseEnter={changeColorGreen} onContextMenu={changeColorBlack}></div>
 
 
   }
