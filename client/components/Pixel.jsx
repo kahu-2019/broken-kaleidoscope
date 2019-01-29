@@ -18,14 +18,22 @@ class Pixel extends React.Component {
   }
 
   clickHandler(evt) {
-    this.setState({
-      style: { height: '20px', width: '20px', backgroundColor: this.randomHexColor() }
-    })
+    if (evt.buttons == 1) {
+      this.setState({
+        style: { height: '20px', width: '20px', backgroundColor: 'yellow' }
+      })
+    } else {
+      this.setState({
+        style: { height: '20px', width: '20px', backgroundColor: this.randomHexColor() }
+      })
+    }
+    evt.preventDefault()
+    evt.stopPropagation()
   }
 
   render() {
     return (
-      <div style={this.state.style} onMouseOver={this.clickHandler.bind(this)}></div>
+      <div style={this.state.style} onMouseOver={this.clickHandler.bind(this)} />
     )
   }
 }
