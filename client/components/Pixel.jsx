@@ -3,8 +3,8 @@ import React from 'react'
 const newStyle = (color) => {
   return {
     fontFamily: 'Times New Roman',
-    height: '50px',
-    width: '5%',
+    height: "20px",
+    width: "20px",
     backgroundColor: color || `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
   }
 }
